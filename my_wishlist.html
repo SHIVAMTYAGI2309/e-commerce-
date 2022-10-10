@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css">
+
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- A favicon is a small file containing the one or more icons which are used to represent the website. -->
+    <link rel="icon" type="image/png" href="images\flavicon.png">
+
+    <!-- The <title> tag in HTML is used to define the title of HTML document. -->
+    <title>Swag of India-Wishlist Page</title>
+
+    <!-- add a link to use an external style sheet -->
+    <link rel="stylesheet" href="./css/my_wishlist.css">
+
+</head>
+
+<body>
+
+    <!-- The <header> element represents a container for introductory content or a set of navigational links. -->
+    <header>
+        <div class="header-top">
+            <div class="container-xl">
+                <div class="row header-body">
+
+                    <!-- ARIA is a set of attributes we can add to HTML elements that define ways to make web content and applications accessible to users with disabilities who use assistive technologies  -->
+                    <div class="socialmedia col-md-2 justify-content-md-start justify-content-center" role="group"
+                        tabindex="0" aria-label="social media">
+                        <a class="navbar-brand" href="#"><img src="images\facebook round.png" alt="facebook"
+                                aria-label="follow company on facebook"></a>
+                        <a class="navbar-brand" href="#"><img src="images\Group 2556.png" alt="youtube"
+                                aria-label="follow company on youtube"></a>
+                        <a class="navbar-brand" href="#"><img src="images\Group 2557.png" alt="twitter"
+                                aria-label="follow company on twitter"></a>
+                    </div>
+                    <div class="searchbar col-md-4 justify-content-center">
+                        <input type="search" class="form-control" placeholder="Search products& Brands"
+                            aria-label="Search">
+                        <img src="images\Group 2558.png" alt="search">
+                    </div>
+                    <div class="details col-md-6 justify-content-md-end justify-content-center">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a id="contact-no" class="nav-link" href="tel:+91 9838203720"><img
+                                        src="images\Group 2559.png" alt="contact">+91 9838203720</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Seller_page.html">Sell On Company</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Download App</a>
+                            </li>
+                            <li class="selector nav-item">
+                                <img id="selector-img" src="images\india.png" alt="flag">
+
+                                <!-- JavaScript event onchange -->
+                                <select id="countriesList" class="countries" onchange="countriesFunction()">
+                                    <option value="india">India</option>
+                                    <option value="usa">USA</option>
+                                    <option value="uk">UK</option>
+                                    <option value="germany">Germany</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript event onclick -->
+        <button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollTopFunction()"><i
+                class="fas fa-chevron-up"></i></button>
+
+        <div class="header-bottom" id="stickyHeader">
+            <!-- Containers are the most basic layout element in Bootstrap and are required when using our default grid system. -->
+            <div class="container-xl pad-sm-10">
+
+                <!-- Navbar Documentation and examples for Bootstrap’s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, collapse plugin, and more. -->
+                <nav class="navbar navbar-expand-md navbar-light nav-list">
+                    <img src="images\logo.png" alt="swagofindia logo">
+
+                    <!-- The hamburger menu is the button in websites that typically opens up into a side menu or navigation drawer. An easy way to communicate to users that the button contained a list of items. Here hamburger opens at medium device-->
+                    <button class="navbar-toggler toggle-button" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="headernav navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link nav-position headernav-menu" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-position headernav-menu"
+                                    href="./product_list.html">Categories</a>
+                                <ul class="submenu">
+                                    <li><a href="./product_list.html">Men</a></li>
+                                    <li><a href="./product_list.html">Women</a></li>
+                                    <li><a href="./product_list.html">Ethnic</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-position headernav-menu" href="./my_profile.html">Profile</a>
+                                <ul class="submenu">
+                                    <li><a href="./my_profile.html">My Profile</a></li>
+                                    <li><a href="./edit_profile.html">Edit Profile</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-position headernav-menu" href="./my_orders.html">Orders</a>
+                                <ul class="submenu">
+                                    <li><a href="./my_orders.html">My Orders</a></li>
+                                    <li><a href="./track_order.html">Track Orders</a></li>
+                                    <li><a href="./return_order.html">Return Orders</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-position headernav-menu active" href="./my_wishlist.html"><i
+                                        class="fas fa-heart"></i> Wishlist <span id="myWishlistItem">0</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-position headernav-menu" href="./my_carts.html"><i
+                                        class="fas fa-shopping-cart"></i>
+                                    Cart <span id="myCartItem">0</span></a>
+                            </li>
+                        </ul>
+                        <!-- Button trigger modal -->
+                        <button class="my-2 my-sm-0 btn-signin" type="submit" data-toggle="modal"
+                            data-target="#Modal-container">SIGN
+                            IN</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal element-->
+    <!-- Toggle a working modal by clicking the button below. It will slide down and fade in from the top of the page. -->
+    <div class="modal fade" id="Modal-container" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal header element which contains logo and exit button -->
+                <div class="modal-header d-flex flex-column-reverse align-items-center">
+                    <img src="images\logo.png" alt="logo">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <!-- Modal body elements which contains pills of login and create account -->
+                    <nav class="body-pills">
+                        <div class="nav nav-pills" id="pills-tab" role="tablist">
+                            <a class="nav-item nav-link active login-pill" id="pills-login-tab" data-toggle="pill"
+                                href="#login-body" role="tab" aria-controls="login-body" aria-selected="true">LOGIN</a>
+                            <a class="nav-item nav-link create-account-pill" id="pills-createaccount-tab"
+                                data-toggle="pill" href="#createaccount-body" role="tab"
+                                aria-controls="createaccount-body" aria-selected="false">CREATE ACCOUNT</a>
+                        </div>
+                    </nav>
+
+                    <!-- content element for login and create account pills -->
+                    <div class="tab-content" id="pills-tabContent">
+                        <!-- This is Modal body login elements and it is labeld by login pills when login pills strike this element is visible -->
+                        <div class="tab-pane fade show active" id="login-body" role="tabpanel"
+                            aria-labelledby="pills-login-tab">
+                            <form action="/action_page.php">
+                                <label for="email">Email address</label><span class="important">*</span>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" placeholder="Enter e-mail">
+                                </div>
+
+                                <label for="userPassword">Password</label><span class="important">*</span>
+                                <div class="input-group input-password">
+                                    <input id="userPassword" type="password" class="form-control"
+                                        placeholder="Enter password" aria-labelledby="visible-password">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="visible-password"><i
+                                                class="fas fa-eye"></i></span>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- buttons for sign in and fogot your password -->
+                            <button type="button" class="btn sign-in-btn">SIGN IN</button>
+                            <button type="button" class="btn FYP-btn">FORGOT YOUR PASSWORD?</button>
+                        </div>
+
+                        <!-- This is Modal body create account elements and it is labeld by create account pills when create account pills strike this element is visible -->
+                        <div class="tab-pane fade" id="createaccount-body" role="tabpanel"
+                            aria-labelledby="pills-createaccount-tab">
+                            <form action="/action_page.php">
+                                <label for="Username">Username</label><span class="important">*</span>
+                                <div class="form-group">
+                                    <input type="text" id="Username" class="form-control" placeholder="Username">
+                                </div>
+
+                                <label for="emailaddress">Email address</label><span class="important">*</span>
+                                <div class="form-group">
+                                    <input type="email" id="emailaddress" class="form-control"
+                                        placeholder="Enter e-mail">
+                                </div>
+
+                                <label for="newPassword">Password</label><span class="important">*</span>
+                                <div class="input-group input-password">
+                                    <input type="password" id="newPassword" class="form-control"
+                                        placeholder="Enter password" aria-describedby="visible-password">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="visible-password"><i
+                                                class="fas fa-eye"></i></span>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- buttons for create account -->
+                            <button type="button" class="btn create-account-btn-body">CREATE
+                                ACCOUNT</button>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer elements it contains social media buttons-->
+                    <div class="modal-footer justify-content-center">
+                        <span>Or Login With</span>
+                        <div class="d-flex justify-content-between footer-btn-group">
+                            <button type="button" class="btn facebook-btn"><span><i
+                                        class="fab fa-facebook-f"></i>FACEBOOK</span></button>
+                            <button type="button" class="btn twitter-btn"><span><i
+                                        class="fab fa-twitter"></i>TWITTER</span></button>
+                            <button type="button" class="btn google-btn"><span><i
+                                        class="fab fa-google-plus-g"></i>GOOGLE</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The <main> tag specifies the main content of a document. -->
+    <main>
+        <!-- this is breadcrumb indicate the current page -->
+        <div class="profile-breadcrumb">
+            <div class="container-xl">
+                <nav>
+                    <ol>
+                        <li><a href="./my_wishlist.html">Wishlist</a></li>
+                        <li><a href="./my_wishlist.html">My Wishlist</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <section>
+            <div class="container-xl">
+                <div class="row">
+                    <!--  Side Navbar is a navigation component providing a clear way for navigating complex websites with lots of pages. -->
+                    <div class="col-md-3 col-12 padding-none">
+                        <div class="side-navigation d-flex flex-md-column flex-row justify-content-between">
+                            <!-- profile of the customer -->
+                            <div class="my-account">
+                                <h5>MY ACCOUNT</h5>
+                                <img src="images\Image 161.png" alt="manikandan" width="70vw">
+                                <div class="d-flex flex-column">
+                                    <span>Manikandan</span>
+                                    <span>mani2005.16@gmail.com</span>
+                                </div>
+                            </div>
+                            <!-- orders sub navigation -->
+                            <div class="wishlist-payment d-flex flex-column">
+                                <h5>ORDERS</h5>
+                                <a href="./my_orders.html">My Order</a>
+                                <a href="./track_order.html">Track Order</a>
+                                <a href="./return_order.html">Returns order</a>
+                                <a href="./return_order.html">Cancelled Order</a>
+                            </div>
+                            <!-- Account sub navigation -->
+                            <div class="account d-flex flex-column">
+                                <nav class="nav flex-column" id="nav-tab" role="tablist">
+                                    <h5>ACCOUNT</h5>
+                                    <a class="nav-link" href="./my_profile.html" role="tab">Profile</a>
+                                    <a class="nav-link" href="./edit_profile.html" role="tab">Saved Addresses</a>
+                                    <a class="nav-link" href="./thankyou.html" role="tab">Saved Cards</a>
+                                    <a class="nav-link" href="./edit_profile.html" role="tab">Change Password</a>
+                                    <a class="nav-link active" href="./my_wishlist.html" role="tab">Wishlist</a>
+                                </nav>
+                            </div>
+                            <!-- payment sub navigation -->
+                            <div class="wishlist-payment d-flex flex-column">
+                                <h5>PAYMENT</h5>
+                                <a href="./checkout.html">Phonepe</a>
+                                <a href="./checkout.html">Gift Card</a>
+                                <a href="./checkout.html">Debit Card</a>
+                                <a href="./checkout.html">Credit Card</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-12 padding-none">
+                        <div class="wishlist-body-top d-flex align-items-center justify-content-between">
+                            <div class="wishlist-body-top-heading d-flex">
+                                <div class="d-flex align-items-center">
+                                    <span>My Wishlsit</span><span>(<div class="d-inline-block"
+                                            id="numberOfWishlisItems"></div> Items)</span>
+                                </div>
+                                <div class="d-flex align-items-center"><i class="fas fa-heart"></i> <span>Recently
+                                        Added</span></div>
+                            </div>
+
+                            <div class="sort-by">SORT BY
+                                <span>
+                                    <select name="sorts">
+                                        <option value="low-high">Price (Low to High)</option>
+                                        <option value="high-low">Price (High to Low)</option>
+                                        <option value="womens">Womens</option>
+                                        <option value="mens">Mens</option>
+                                        <option value="ethnics">Ethnics</option>
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="wrapWishlist">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container-xl pad-sm-10">
+            <div class="suprt-box">
+                <div class="row">
+                    <span class="border d-inline-flex align-items-center flex-column col-6 col-md-3" tabindex="0"
+                        role="group">
+                        <img src="images\Image 34.png" alt="secure payments">
+                        <h6>100% SECURE PAYMENTS</h6>
+                        <p>Moving your card details to a much more secure place</p>
+                    </span>
+                    <span class="border d-inline-flex align-items-center flex-column col-6 col-md-3" tabindex="0"
+                        role="group">
+                        <img src="images\Image 35.png" alt="trustpay">
+                        <h6>TRUSTPAY</h6>
+                        <p>100% Payment Protection Easy Return Policy</p>
+                    </span>
+                    <span class="border d-inline-flex align-items-center flex-column col-6 col-md-3" tabindex="0"
+                        role="group">
+                        <img src="images\Image 36.png" alt="help center">
+                        <h6>HELP CENTER</h6>
+                        <p>Got a question? Look no further. Browse our FAQs or submit your query here.</p>
+                    </span>
+                    <span class="border d-inline-flex align-items-center flex-column col-6 col-md-3" tabindex="0"
+                        role="group">
+                        <img src="images\Image 37.png" alt="shop on the go">
+                        <h6>SHOP ON THE GO</h6>
+                        <p>Download the app and get exciting app only offers at your fingertips</p>
+                    </span>
+                </div>
+            </div>
+
+
+            <!-- The row provides the columns a place to live, ideally having columns that add up to 12. It also acts as a wrapper since all the columns float left. -->
+            <div class="row swagofindia-details">
+                <!-- For grids that are the same from the smallest of devices to the largest, use the .col-* -->
+                <div class="col-6 col-lg" tabindex="0" role="navigation">
+                    <h5>POLICY INFO</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Privacy Policy</a></li>
+                        <li><a class="text-muted" href="#">Terms of Sale</a></li>
+                        <li><a class="text-muted" href="#">Terms of use</a></li>
+                        <li><a class="text-muted" href="#">Report abuse& Takedown Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg" tabindex="0" role="navigation">
+                    <h5>COMPANY</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">About Us</a></li>
+                        <li><a class="text-muted" href="#">Core Values</a></li>
+                        <li><a class="text-muted" href="#">careers</a></li>
+                        <li><a class="text-muted" href="#">Blog</a></li>
+                        <li><a class="text-muted" href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg" tabindex="0" role="navigation">
+                    <h5>SWAGOFINDIA BUSINESS</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Shopping App</a></li>
+                        <li><a class="text-muted" href="#">sell on Swag of India</a></li>
+                        <li><a class="text-muted" href="#">Advertise on swag of india</a></li>
+                        <li><a class="text-muted" href="#">Media Enquiries</a></li>
+                        <li><a class="text-muted" href="#">Be an Affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg" tabindex="0" role="navigation">
+                    <h5>NEED HELP?</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="./faq.html">FAQ</a></li>
+                        <li><a class="text-muted" href="#">Contact Us</a></li>
+                        <li><a class="text-muted" href="#">Online Shopping</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg" tabindex="0" role="navigation">
+                    <h5>SUBSCRIBE</h5>
+                    <ul class="list-unstyled text-small">
+                        <li>
+                            <div class="input-group">
+                                <input type="email" class="form-control emailaddress" placeholder="Your Email Address"
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text submit-email" id="basic-addon2"
+                                        type="button">Subscribe</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li><span class="text-muted">Register now to get updates on promotions and coupons. Or
+                            </span><a id="download" href="#">Download App</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <hr>
+
+    <!-- The <footer> tag defines a footer for a document or section. A <footer> element typically contains such as copyright information, contact information and also payment information. -->
+    <footer>
+        <div class="container-xl">
+            <div class="row pay-con">
+
+                <!-- ARIA is a set of attributes we can add to HTML elements that define ways to make web content and applications accessible to users with disabilities who use assistive technologies  -->
+                <div class="col-6 payment" tabindex="0" role="group">
+                    <div><strong>PAYMENTS</strong></div>
+                    <div>
+                        <img src="images\Image 38.png" alt="Payments1" aria-label="payment on Visa Classic Debit Card">
+                        <img src="images\Image 39.png" alt="Payments2" aria-label="payment on Visa Gold Debit Card">
+                        <img src="images\Image 40.png" alt="Payments3" aria-label="payment on credit card">
+                        <img src="images\Image 41.png" alt="Payments4" aria-label="payment on Visa Platinum Debit Card">
+                        <img src="images\Image 42.png" alt="Payments5"
+                            aria-label="payment on Visa Signature Debit Card">
+                        <img src="images\Image 43.png" alt="Payments6" aria-label="payment on Visa Infinite Debit Card">
+                    </div>
+                </div>
+                <div class="connect" tabindex="0" role="group">
+                    <div><strong>CONNECT</strong></div>
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f thu"
+                            aria-label="connect in facebook"></i></a>
+                    <a href="https://twitter.com/"><i class="fab fa-twitter thu"
+                            aria-label="connect in twitter"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube thu"
+                            aria-label="connect in youtube"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram thu"
+                            aria-label="connect in instagram"></i></a>
+                </div>
+            </div>
+    </footer>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+    </script>
+
+
+    <!-- add a script tag to use an external JavaScript file -->
+    <script type="text/javascript" src="./js/cart.js"></script>
+    <script type="text/javascript" src="./js/wishlist.js"></script>
+    <script type="text/javascript" src="./js/my_wishlist.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+
+</body>
+
+</html>

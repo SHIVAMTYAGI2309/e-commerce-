@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css">
+
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- A favicon is a small file containing the one or more icons which are used to represent the website or a blog. It is also known as a tab icon, website icon, URL icon, or a bookmark icon. -->
+    <link rel="icon" type="image/png" href="images\flavicon.png">
+
+    <!-- The <title> tag in HTML is used to define the title of HTML document. -->
+    <title>Swag of India-Product View Page</title>
+
+    <!-- add a link to use an external style sheet -->
+    <link rel="stylesheet" href="./css/product_view.css">
+
+</head>
+
+<body>
+
+    <!-- The <header> element represents a container for introductory content or a set of navigational links. -->
+    <!-- Sticky top Position an element at the top of the viewport, from edge to edge, but only after you scroll past it. The .sticky-top utility uses CSS’s position: sticky. -->
+    <header>
+        <div class="header-top">
+            <div class="container-xl">
+                <div class="row header-body">
+
+                    <!-- ARIA is a set of attributes we can add to HTML elements that define ways to make web content and applications accessible to users with disabilities who use assistive technologies  -->
+                    <div class="socialmedia col-md-2 justify-content-md-start justify-content-center" role="group"
+                        tabindex="0" aria-label="social media">
+                        <a class="navbar-brand" href="#"><img src="images\facebook round.png" alt="facebook"
+                                aria-label="follow company on facebook"></a>
+                        <a class="navbar-brand" href="#"><img src="images\Group 2556.png" alt="youtube"
+                                aria-label="follow company on youtube"></a>
+                        <a class="navbar-brand" href="#"><img src="images\Group 2557.png" alt="twitter"
+                                aria-label="follow company on twitter"></a>
+                    </div>
+                    <div class="searchbar col-md-4 justify-content-center">
+                        <input type="search" class="form-control" placeholder="Search products& Brands"
+                            aria-label="Search">
+                        <img src="images\Group 2558.png" alt="search">
+                    </div>
+                    <div class="details col-md-6 justify-content-md-end justify-content-center">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a id="contact-no" class="nav-link" href="tel:+91 9838203720"><img
+                                        src="images\Group 2559.png" alt="contact">+91 9838203720</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Seller_page.html">Sell On Company</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Download App</a>
+                            </li>
+                            <li class="selector nav-item">
+                                <img id="selector-img" src="images\india.png" alt="flag">
+
+                                <!-- JavaScript event onchange -->
+                                <select id="countriesList" class="countries" onchange="countriesFunction()">
+                                    <option value="india">India</option>
+                                    <option value="usa">USA</option>
+                                    <option value="uk">UK</option>
+                                    <option value="germany">Germany</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript event onclick -->
+        <button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollTopFunction()"><i
+                class="fas fa-chevron-up"></i></button>
+
+        <div class="header-bottom" id="stickyHeader">
+            <!-- Containers are the most basic layout element in Bootstrap and are required when using our default grid system. -->
+            <div class="container-xl pad-sm-10">
+
+                <!-- Navbar Documentation and examples for Bootstrap’s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, collapse plugin, and more. -->
+                <nav class="navbar navbar-expand-md navbar-light nav-list">
+                    <img src="images\logo.png" alt="swagofindia logo">
+
+                    <!-- The hamburger menu is the button in websites that typically opens up into a side menu or navigation drawer. An easy way to communicate to users that the button contained a list of items. Here hamburger opens at medium device-->
+                    <button class="navbar-toggler toggle-button" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="headernav navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link nav-position headernav-menu" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-position headernav-menu"
+                                    href="./product_list.html">Categories</a>
+                                <ul class="submenu">
+                                    <li><a href="./product_list.html">Men</a></li>
+                                    <li><a href="./product_list.html">Women</a></li>
+                                    <li><a href="./product_list.html">Ethnic</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-position headernav-menu" href="./my_profile.html">Profile</a>
+                                <ul class="submenu">
+                                    <li><a href="./my_profile.html">My Profile</a></li>
+                                    <li><a href="./edit_profile.html">Edit Profile</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-position headernav-menu"
+                                    href="./my_orders.html">Orders</a>
+                                <ul class="submenu">
+                                    <li><a href="./my_orders.html">My Orders</a></li>
+                                    <li><a href="./track_order.html">Track Orders</a></li>
+                                    <li><a href="./return_order.html">Return Orders</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-position headernav-menu" href="./my_wishlist.html"><i
+                                        class="fas fa-heart"></i> Wishlist <span id="myWishlistItem">0</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-position headernav-menu" href="./my_carts.html"><i
+                                        class="fas fa-shopping-cart"></i>
+                                    Cart <span id="myCartItem">0</span></a>
+                            </li>
+                        </ul>
+                        <!-- Button trigger modal -->
+                        <button class="my-2 my-sm-0 btn-signin" type="submit" data-toggle="modal"
+                            data-target="#Modal-container">SIGN
+                            IN</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal element-->
+    <!-- Toggle a working modal by clicking the button below. It will slide down and fade in from the top of the page. -->
+    <div class="modal fade" id="Modal-container" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal header element which contains logo and exit button -->
+                <div class="modal-header d-flex flex-column-reverse align-items-center">
+                    <img src="images\logo.png" alt="logo">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <!-- Modal body elements which contains pills of login and create account -->
+                    <nav class="body-pills">
+                        <div class="nav nav-pills" id="pills-tab" role="tablist">
+                            <a class="nav-item nav-link active login-pill" id="pills-login-tab" data-toggle="pill"
+                                href="#login-body" role="tab" aria-controls="login-body" aria-selected="true">LOGIN</a>
+                            <a class="nav-item nav-link create-account-pill" id="pills-createaccount-tab"
+                                data-toggle="pill" href="#createaccount-body" role="tab"
+                                aria-controls="createaccount-body" aria-selected="false">CREATE ACCOUNT</a>
+                        </div>
+                    </nav>
+
+                    <!-- content element for login and create account pills -->
+                    <div class="tab-content" id="pills-tabContent">
+                        <!-- This is Modal body login elements and it is labeld by login pills when login pills strike this element is visible -->
+                        <div class="tab-pane fade show active" id="login-body" role="tabpanel"
+                            aria-labelledby="pills-login-tab">
+                            <form action="/action_page.php">
+                                <label for="email">Email address</label><span class="important">*</span>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" placeholder="Enter e-mail">
+                                </div>
+
+                                <label for="userPassword">Password</label><span class="important">*</span>
+                                <div class="input-group input-password">
+                                    <input id="userPassword" type="password" class="form-control"
+                                        placeholder="Enter password" aria-labelledby="visible-password">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="visible-password"><i
+                                                class="fas fa-eye"></i></span>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- buttons for sign in and fogot your password -->
+                            <button type="button" class="btn sign-in-btn">SIGN IN</button>
+                            <button type="button" class="btn FYP-btn">FORGOT YOUR PASSWORD?</button>
+                        </div>
+
+                        <!-- This is Modal body create account elements and it is labeld by create account pills when create account pills strike this element is visible -->
+                        <div class="tab-pane fade" id="createaccount-body" role="tabpanel"
+                            aria-labelledby="pills-createaccount-tab">
+                            <form action="/action_page.php">
+                                <label for="Username">Username</label><span class="important">*</span>
+                                <div class="form-group">
+                                    <input type="text" id="Username" class="form-control" placeholder="Username">
+                                </div>
+
+                                <label for="emailaddress">Email address</label><span class="important">*</span>
+                                <div class="form-group">
+                                    <input type="email" id="emailaddress" class="form-control"
+                                        placeholder="Enter e-mail">
+                                </div>
+
+                                <label for="newPassword">Password</label><span class="important">*</span>
+                                <div class="input-group input-password">
+                                    <input type="password" id="newPassword" class="form-control"
+                                        placeholder="Enter password" aria-describedby="visible-password">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="visible-password"><i
+                                                class="fas fa-eye"></i></span>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- buttons for create account -->
+                            <button type="button" class="btn create-account-btn-body">CREATE
+                                ACCOUNT</button>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer elements it contains social media buttons-->
+                    <div class="modal-footer justify-content-center">
+                        <span>Or Login With</span>
+                        <div class="d-flex justify-content-between footer-btn-group">
+                            <button type="button" class="btn facebook-btn"><span><i
+                                        class="fab fa-facebook-f"></i>FACEBOOK</span></button>
+                            <button type="button" class="btn twitter-btn"><span><i
+                                        class="fab fa-twitter"></i>TWITTER</span></button>
+                            <button type="button" class="btn google-btn"><span><i
+                                        class="fab fa-google-plus-g"></i>GOOGLE</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The <main> tag specifies the main content of a document. -->
+    <main>
+        <div class="profile-breadcrumb">
+            <div class="container-xl">
+                <nav>
+                    <ol>
+                        <li><a href="./product_list.html">Categories</a></li>
+                        <li><a href="./product_view.html">Product view</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="container-xl">
+            <!-- This section is used for product view here we can view product, add to cart, save and we can select size of product and quantity -->
+            <div id="productViewContent">
+
+            </div>
+            <hr>
+
+            <!-- this section is contained prodcut description, size, assigned tags and Mnay cutom tabs -->
+            <section>
+                <ul class="nav product-about" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab"
+                            aria-controls="description" aria-selected="true">Description</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="sizingGuide-tab" data-toggle="tab" href="#sizingGuide" role="tab"
+                            aria-controls="sizingGuide" aria-selected="false">Sizing Guide</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="assignedTags-tab" data-toggle="tab" href="#assignedTags" role="tab"
+                            aria-controls="assignedTags" aria-selected="false">Assigned Tags</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="manyCustomTag-tab" data-toggle="tab" href="#manyCustomTag" role="tab"
+                            aria-controls="manyCustomTag" aria-selected="false">Many Custom Tabs</a>
+                    </li>
+                </ul>
+                <div class="tab-content product-about-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="description" role="tabpanel"
+                        aria-labelledby="description-tab">
+                        <h6>Give you a complete account of the system</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolorem ullam ut necessitatibus
+                            commodi voluptas illum accusantium explicabo distinctio et quas placeat, cumque aliquam
+                            iusto, porro iste. Iure facilis tempora, eius vero dicta aliquid sit nostrum ipsam
+                            dignissimos rem quae quo ipsa maxime nemo aspernatur alias repudiandae odio! Vitae, facere
+                            quidem minus voluptatum quia voluptatibus rerum accusantium fuga, quibusdam, officia eum
+                            enim? Libero sapiente fugit mollitia consequuntur quas eius, facere sunt. At minus harum
+                            quisquam minima similique odit ducimus, beatae repellendus ipsam cupiditate iste magnam
+                            nobis, molestias est delectus quia reiciendis alias. Harum quo tenetur corporis quaerat
+                            facere nostrum, asperiores obcaecati repellendus consectetur odio aperiam porro ex
+                            architecto. Repellat iure soluta officia maiores consequatur tempore nam velit adipisci,
+                            sapiente commodi nostrum doloremque at cupiditate, accusamus nulla eius ullam. Non eveniet
+                            quaerat velit iusto facere autem, qui doloremque cupiditate quo, dicta beatae maxime
+                            quisquam repellat sunt perspiciatis fuga reprehenderit aliquam quidem eligendi. Corporis
+                            dolorem eos ipsam asperiores unde deleniti quaerat beatae! Odit eos vero maxime? Quo libero
+                            ducimus eius sint, officiis nobis repellat? Cum, officia optio? At id itaque fugiat, atque
+                            velit nihil temporibus dolorum dolores expedita corporis sunt voluptatem sit omnis pariatur
+                            ullam, nobis ex. Ad ex quidem, est aliquam ea architecto sapiente! Nesciunt et rem natus
+                            vel, minima sapiente sit doloremque! Debitis accusantium nostrum consectetur corrupti modi
+                            a, voluptate nobis doloribus quod. Sapiente tempora molestiae, reiciendis expedita pariatur
+                            totam corporis, iure animi commodi architecto illum exercitationem. Obcaecati rerum modi,
+                            exercitationem perferendis eum debitis asperiores maiores possimus illum enim dolores
+                            molestias qui beatae earum blanditiis officiis, aliquam, est vel! Incidunt commodi velit
+                            omnis officia exercitationem iusto fugiat sequi natus ipsam repellendus. Vel eveniet ab
+                            adipisci sit minima deserunt, suscipit impedit molestias unde, officia deleniti blanditiis
+                            eos nisi tenetur quisquam dignissimos rerum delectus totam. Vitae quia animi a. Rem id,
+                            debitis tenetur ut consequatur beatae quibusdam asperiores, dolor repellat blanditiis
+                            reprehenderit consectetur iure eos nam inventore quae eaque dolorum commodi? Vel inventore
+                            ullam deleniti dignissimos numquam nobis. Ut non reiciendis perferendis laborum. Quia
+                            exercitationem, distinctio libero maxime nisi autem repellendus excepturi magnam error fuga
+                            praesentium quisquam et ipsum est fugiat ea consequuntur, in quo! Esse itaque rem doloribus
+                            nesciunt aliquid unde. Labore, placeat atque! Sed exercitationem nesciunt vel suscipit qui
+                            voluptatum fuga tenetur magnam, veniam animi aliquam doloremque deserunt. Aut natus
+                            architecto laborum eligendi vero, esse commodi! Minima esse rerum explicabo magni iste eum
+                            distinctio saepe modi. Non pariatur libero accusamus?</p>
+                    </div>
+                    <div class="tab-pane fade" id="sizingGuide" role="tabpanel" aria-labelledby="sizingGuide-tab">
+                        <h6>To Get The Perfect Fit</h6>
+                        <p>
+                            This is a dilemma faced by almost everyone when purchasing an outfit. What size would be a
+                            fit for me? Is a question we often ask ourselves.<br>You just need three measurements and
+                            you are all set!
+                            <br>
+                            1. Bust
+                            <br>
+                            2. Waist
+                            <br>
+                            3. Hips
+                            <br>And we can help you understand how to
+                            measure them and be confident while picking out your dress size. The image shows the right
+                            way to hold the measuring tape to get the correct reading. Also, remember never to take the
+                            measurements over your regular clothes as they might give out
+                            wrong results.
+                            <br>
+                            Starting off with understanding the size charts, we have provided here the
+                            most popular clothing sizes used globally as reference. While it flexibly answers your
+                            question of “What dress size would fit me?”; you can always resort to our dress size
+                            calculator for an accurate fit.
+                            <br>
+                            As per the size chart you can clearly see that the sizes vary from country to country and in
+                            some cases, it varies from designer to designer. So having your right body measurements
+                            always is best to avoid confusion.
+                            <br>
+                            With that being clear, let’s understand how to figure out a dress for the special day. Sizes
+                            of wedding dresses are the real challenge as different stores have different sizes and its
+                            always frustrating to keep on hunting for the right one
+                            <br>
+                            In order for you to be at ease while choosing your perfect fit, we have compiled all
+                            available resources to get you a universal size chart that would ease your search. Now you
+                            don’t want to have your dress altered for a high price after you bought it for a fortune, do
+                            you?
+                            <br>
+                            We usually go all the way while shopping for the perfect wedding dress or bridesmaid looks.
+                            You will cherish these memories for a lifetime, so why not be the best dressed? And a
+                            wardrobe mishap is the last thing you need! So, here’s what you need to do to not mess up on
+                            the size
+                            of your dress.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="assignedTags" role="tabpanel" aria-labelledby="assignedTags-tab">
+                        <h6>Assigned tab details</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae quo suscipit, eveniet
+                            provident accusantium aliquam nostrum minus placeat quibusdam voluptatem ex exercitationem
+                            autem, commodi quis enim vero dicta. Libero iste debitis eveniet vel voluptates ipsum in
+                            reprehenderit esse laboriosam, totam ullam nesciunt tempora ratione cupiditate voluptate
+                            dolor velit distinctio molestiae ipsam tempore corporis! Molestiae consequatur saepe harum,
+                            modi hic quia eaque itaque similique maxime dolor iure ipsa earum mollitia tenetur numquam
+                            est. Dolore nulla aperiam eius quo reiciendis praesentium laborum laboriosam harum maxime
+                            maiores, esse ipsam neque perspiciatis voluptatem libero iusto debitis alias aliquid
+                            adipisci saepe, autem omnis provident officia quasi? Voluptatibus, voluptatum! Suscipit
+                            dolores eveniet incidunt, deleniti in explicabo quibusdam magni modi repudiandae ullam.
+                            Nesciunt hic eveniet facere expedita accusantium obcaecati. Neque, non accusantium ea rerum
+                            eveniet saepe quod. Fugiat rem, sed cupiditate ex corrupti blanditiis a quidem odit sequi
+                            porro illum, voluptatibus voluptate, aspernatur libero fugit minus quae? Exercitationem sit
+                            repudiandae sint quam architecto ipsa ipsam voluptas nobis laudantium iure, perspiciatis
+                            animi et omnis dolorum placeat aliquid mollitia fuga velit consequatur ut voluptate eos?
+                            Molestias excepturi tempora repellendus inventore incidunt magni cum expedita facere error
+                            numquam quae beatae laborum blanditiis quidem ipsa, eligendi officiis optio eaque nemo?</p>
+                    </div>
+                    <div class="tab-pane fade" id="manyCustomTag" role="tabpanel" aria-labelledby="manyCustomTag-tab">
+                        <h6>Many custom tabs details</h6>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti ullam saepe in dolor
+                            eligendi, iusto minima asperiores, fugit est aperiam officiis sit atque inventore rem nemo?
+                            Nisi reprehenderit expedita quos est aliquam unde recusandae, possimus iure. Ab eveniet
+                            similique
+                            accusantium suscipit sit cupiditate doloribus! Adipisci fugiat laudantium maxime, ratione
+                            eum, sint eveniet tempore autem repudiandae repellat at dolorum dolor! Sint voluptatibus
+                            provident dolore aut totam eos numquam! Tempore optio, molestias vitae et sapiente
+                            cupiditate quam vero iure dignissimos enim, neque accusamus quidem corporis ex libero odio
+                            amet quo eos
+                            repudianda deleniti earum voluptatibus eaque! Autem ratione vel modi, suscipit hic
+                            doloremque error quas earum, praesentium odio, voluptates ipsa. In, animi beatae dolore unde
+                            numquam culpa
+                            libero dicta maxime. Sed eveniet assumenda deleniti explicabo eum natus cumque quaerat
+                            repellendus
+                            ipsa at optio, obcaecati quidem nemo aliquam. Sapiente veniam delectus sunt laborum iusto
+                            earum, assumenda incidunt reprehenderit, eligendi molestiae debitis mollitia voluptates
+                            dolor
+                            doloribus velit aspernatur? Eum, ea ut excepturi maxime laborum magnam aut cum dolorum saepe
+                            debitis aspernatur ipsum delectus, explicabo officia ab assumenda iusto quidem ducimus
+                            voluptatum
+                            mollitia eos. Maiores, odit error magnam consequatur, cumque ducimus soluta asperiores eius
+                            ipsum voluptatum libero pariatur fugiat facere sed. Distinctio qui animi earum? Lorem ipsum
+                            dolor sit, amet consectetur adipisicing elit. Provident iure ipsum consequatur optio dolorem
+                            delectus! Odit tempora incidunt modi inventore officia quod perferendis id. Asperiores
+                            labore suscipit autem dolorum perferendis rerum aut laborum architecto illum recusandae
+                            praesentium, quia, eligendi dignissimos! Odio recusandae eaque eos! Harum, minus dolorem
+                            animi eveniet provident ducimus explicabo aperiam id vero commodi facilis delectus, dolore
+                            aliquam! Libero, debitis ut officia ducimus, accusantium, dolore natus mollitia voluptate
+                            exercitationem cumque ullam excepturi? Ducimus ipsa nihil a voluptatibus, et labore quas
+                            alias deleniti, consectetur iusto adipisci dolorem architecto. Dicta alias unde officia
+                            ducimus? Magni consequuntur fuga repudiandae hic incidunt.</p>
+                    </div>
+                </div>
+            </section>
+            <hr>
+
+            <!-- This section is conataining customer review on the product, which already buyed same product and here we can see the product rating also-->
+            <section class="customer-review-container" id="reviewDiv">
+                <div class="row mt-sm-5 mt-1">
+                    <div class="col-md-4 col-12 pad-sm-xsm-0">
+                        <div class="customer-review">
+                            <h5>Customer Reviews</h5>
+                            <div>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>
+                                    4 out of 5 stars
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="customer-review-progress-container">
+                            <span>3 Customer ratings</span>
+
+                            <!-- this is customer rivew bar -->
+                            <div class="customer-review-progress">
+
+                                <span>5 Star</span>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span>75%</span>
+
+                                <span>4 Star</span>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 55%"
+                                        aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span>55%</span>
+
+
+                                <span>3 Star</span>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 10%"
+                                        aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span>10%</span>
+
+                                <span>2 Star</span>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 2%"
+                                        aria-valuenow="2" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span>2%</span>
+
+                                <span>1 Star</span>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 5%"
+                                        aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span>5%</span>
+
+                            </div>
+
+                            <div class="product-review-button">
+                                <h5>Review this Product</h5>
+                                <span>Share your thoughts with other customers</span>
+                                <button>Write a Product Review</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- customer reviews and comments on product -->
+                    <div class="col-md-8 col-12 pad-sm-xsm-0">
+                        <div class="user-review">
+                            <div class="user-profile">
+                                <div><i class="far fa-user"></i></div>
+                                <span>Dr. Jhon Varghese Parampil</span>
+                            </div>
+                            <div class="user-rating d-flex flex-column">
+                                <div>
+                                    <span><i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i></span>
+                                    <span>Early delivery., Very reasonable price</span>
+                                </div>
+                                <span>
+                                    Reviewed in India on 2 june 2022
+                                </span>
+                                <span>
+                                    Verified Purchase
+                                </span>
+                                <p>
+                                    Manufacture year is 2018. So CEAT company rejected online registration for extended
+                                    warranty But they said tyres are eligible for normal warranty for the balance 3
+                                    years. When I compare the price, I found, it is reasonable.<br><br>In shorts, if you
+                                    are looking for full warranty of 5 years with unlimited extended warranty of six
+                                    months, buy
+                                </p>
+                            </div>
+                            <div class="user-helpful-comment-report">
+                                <button>Helpful</button>
+                                <span>|</span>
+                                <a href="#">Comment</a>
+                                <span>|</span>
+                                <a href="#">Report abuse</a>
+                            </div>
+                        </div>
+
+                        <div class="user-review">
+                            <div class="user-profile">
+                                <div><i class="far fa-user"></i></div>
+                                <span>Dr. Jhon Varghese Parampil</span>
+                            </div>
+                            <div class="user-rating d-flex flex-column">
+                                <div>
+                                    <span><i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i></span>
+                                    <span>Early delivery., Very reasonable price</span>
+                                </div>
+                                <span>
+                                    Reviewed in India on 2 june 2022
+                                </span>
+                                <span>
+                                    Verified Purchase
+                                </span>
+                                <p>
+                                    Manufacture year is 2018. So CEAT company rejected online registration for extended
+                                    warranty But they said tyres are eligible for normal warranty for the balance 3
+                                    years. When I compare the price, I found, it is reasonable.<br><br>In shorts, if you
+                                    are looking for full warranty of 5 years with unlimited extended warranty of six
+                                    months, buy
+                                </p>
+                            </div>
+                            <div class="user-helpful-comment-report">
+                                <button>Helpful</button>
+                                <span>|</span>
+                                <a href="#">Comment</a>
+                                <span>|</span>
+                                <a href="#">Report abuse</a>
+                            </div>
+                        </div>
+                        <div class="review-India"><a href="">See all review from India</a></div>
+                    </div>
+                </div>
+            </section>
+            <hr>
+
+            <!-- This section is contained related product. Here lot of product is available we can scroll right and left button to view the product -->
+            <section>
+                <div class="mt-product-container">
+                    <div class="margin-H-rltd-prdct">
+                        <h1>RELATED PRODUCTS</h1>
+                    </div>
+                    <div class="product-container">
+
+                        <!-- container of different products which reated to view product -->
+                        <div class="row flex-nowrap scrolling-products" id="scrollingProducts">
+
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 product">
+                                <div class="card mb-4 shadow-sm">
+                                    <img src="images/product1.png" alt="product1" width="100%">
+                                    <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                                        <span class="listing-product-name">Dummy Product 1</span>
+                                        <div class="listing-product-cost"><span>Rs 2000.0 </span><span>Rs
+                                                2500.0</span><span> (20% Off)</span></div>
+                                        <div class="listing-product-rating">
+                                            <ul>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star-half-alt"></i></li>
+                                                <li><i class="far fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 product">
+                                <div class="card mb-4 shadow-sm">
+                                    <img src="images/product2.png" alt="product1" width="100%">
+                                    <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                                        <span class="listing-product-name">Dummy Product 2</span>
+                                        <div class="listing-product-cost"><span>Rs 1000.0 </span><span>Rs
+                                                2000.0</span><span> (50% Off)</span></div>
+                                        <div class="listing-product-rating">
+                                            <ul>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="far fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 product">
+                                <div class="card mb-4 shadow-sm">
+                                    <img src="images/product3.png" alt="product1" width="100%">
+                                    <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                                        <span class="listing-product-name">Dummy Product 3</span>
+                                        <div class="listing-product-cost"><span>Rs 500.0 </span><span>Rs
+                                                1500.0</span><span> (75% Off)</span></div>
+                                        <div class="listing-product-rating">
+                                            <ul>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 product">
+                                <div class="card mb-4 shadow-sm">
+                                    <img src="images/product4.png" alt="product1" width="100%">
+                                    <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                                        <span class="listing-product-name">Dummy Product 4</span>
+                                        <div class="listing-product-cost"><span>Rs 800.0 </span><span>Rs
+                                                1900.0</span><span> (65% Off)</span></div>
+                                        <div class="listing-product-rating">
+                                            <ul>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="far fa-star"></i></li>
+                                                <li><i class="far fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 product">
+                                <div class="card mb-4 shadow-sm">
+                                    <img src="images/product5.png" alt="product1" width="100%">
+                                    <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                                        <span class="listing-product-name">Dummy Product 5</span>
+                                        <div class="listing-product-cost"><span>Rs 1100.0 </span><span>Rs
+                                                2000.0</span><span> (60% Off)</span></div>
+                                        <div class="listing-product-rating">
+                                            <ul>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="far fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 product">
+                                <div class="card mb-4 shadow-sm">
+                                    <img src="images/product6.png" alt="product1" width="100%">
+                                    <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                                        <span class="listing-product-name">Dummy Product 6</span>
+                                        <div class="listing-product-cost"><span>Rs 1099.0 </span><span>Rs
+                                                2748.0</span><span> (60% Off)</span></div>
+                                        <div class="listing-product-rating">
+                                            <ul>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- buttons for product scroll left and right -->
+                        <div class="btn-left-right">
+                            <button type="button" class="btn-left"><i class="fas fa-caret-left"></i></button>
+                            <button type="button" class="btn-right"><i class="fas fa-caret-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <div class="container-xl pad-sm-10">
+            <div class="suprt-box">
+                <div class="row">
+                    <span class="border d-inline-flex align-items-center flex-column col-6 col-md-3" tabindex="0"
+                        role="group">
+                        <img src="images\Image 34.png" alt="secure payments">
+                        <h6>100% SECURE PAYMENTS</h6>
+                        <p>Moving your card details to a much more secure place</p>
+                    </span>
+                    <span class="border d-inline-flex align-items-center flex-column col-6 col-md-3" tabindex="0"
+                        role="group">
+                        <img src="images\Image 35.png" alt="trustpay">
+                        <h6>TRUSTPAY</h6>
+                        <p>100% Payment Protection Easy Return Policy</p>
+                    </span>
+                    <span class="border d-inline-flex align-items-center flex-column col-6 col-md-3" tabindex="0"
+                        role="group">
+                        <img src="images\Image 36.png" alt="help center">
+                        <h6>HELP CENTER</h6>
+                        <p>Got a question? Look no further. Browse our FAQs or submit your query here.</p>
+                    </span>
+                    <span class="border d-inline-flex align-items-center flex-column col-6 col-md-3" tabindex="0"
+                        role="group">
+                        <img src="images\Image 37.png" alt="shop on the go">
+                        <h6>SHOP ON THE GO</h6>
+                        <p>Download the app and get exciting app only offers at your fingertips</p>
+                    </span>
+                </div>
+            </div>
+
+
+            <!-- The row provides the columns a place to live, ideally having columns that add up to 12. It also acts as a wrapper since all the columns float left. -->
+            <div class="row swagofindia-details">
+                <!-- For grids that are the same from the smallest of devices to the largest, use the .col-* -->
+                <div class="col-6 col-lg" tabindex="0" role="navigation">
+                    <h5>POLICY INFO</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Privacy Policy</a></li>
+                        <li><a class="text-muted" href="#">Terms of Sale</a></li>
+                        <li><a class="text-muted" href="#">Terms of use</a></li>
+                        <li><a class="text-muted" href="#">Report abuse& Takedown Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg" tabindex="0" role="navigation">
+                    <h5>COMPANY</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">About Us</a></li>
+                        <li><a class="text-muted" href="#">Core Values</a></li>
+                        <li><a class="text-muted" href="#">careers</a></li>
+                        <li><a class="text-muted" href="#">Blog</a></li>
+                        <li><a class="text-muted" href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg" tabindex="0" role="navigation">
+                    <h5>SWAGOFINDIA BUSINESS</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Shopping App</a></li>
+                        <li><a class="text-muted" href="#">sell on Swag of India</a></li>
+                        <li><a class="text-muted" href="#">Advertise on swag of india</a></li>
+                        <li><a class="text-muted" href="#">Media Enquiries</a></li>
+                        <li><a class="text-muted" href="#">Be an Affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg" tabindex="0" role="navigation">
+                    <h5>NEED HELP?</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="./faq.html">FAQ</a></li>
+                        <li><a class="text-muted" href="#">Contact Us</a></li>
+                        <li><a class="text-muted" href="#">Online Shopping</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg" tabindex="0" role="navigation">
+                    <h5>SUBSCRIBE</h5>
+                    <ul class="list-unstyled text-small">
+                        <li>
+                            <div class="input-group">
+                                <input type="email" class="form-control emailaddress" placeholder="Your Email Address"
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text submit-email" id="basic-addon2"
+                                        type="button">Subscribe</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li><span class="text-muted">Register now to get updates on promotions and coupons. Or </span><a
+                                id="download" href="#">Download App</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <hr>
+
+    <!-- The <footer> tag defines a footer for a document or section. A <footer> element typically contains such as copyright information, contact information and also payment information. -->
+    <footer>
+        <div class="container-xl">
+            <div class="row pay-con">
+
+                <!-- ARIA is a set of attributes we can add to HTML elements that define ways to make web content and applications accessible to users with disabilities who use assistive technologies  -->
+                <div class="col-6 payment" tabindex="0" role="group">
+                    <div><strong>PAYMENTS</strong></div>
+                    <div>
+                        <img src="images\Image 38.png" alt="Payments1" aria-label="payment on Visa Classic Debit Card">
+                        <img src="images\Image 39.png" alt="Payments2" aria-label="payment on Visa Gold Debit Card">
+                        <img src="images\Image 40.png" alt="Payments3" aria-label="payment on credit card">
+                        <img src="images\Image 41.png" alt="Payments4" aria-label="payment on Visa Platinum Debit Card">
+                        <img src="images\Image 42.png" alt="Payments5"
+                            aria-label="payment on Visa Signature Debit Card">
+                        <img src="images\Image 43.png" alt="Payments6" aria-label="payment on Visa Infinite Debit Card">
+                    </div>
+                </div>
+                <div class="connect" tabindex="0" role="group">
+                    <div><strong>CONNECT</strong></div>
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f thu"
+                            aria-label="connect in facebook"></i></a>
+                    <a href="https://twitter.com/"><i class="fab fa-twitter thu"
+                            aria-label="connect in twitter"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube thu"
+                            aria-label="connect in youtube"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram thu"
+                            aria-label="connect in instagram"></i></a>
+                </div>
+            </div>
+    </footer>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+    </script>
+
+
+    <!-- add a script tag to use an external JavaScript file -->
+    <script type="text/javascript" src="./js/cart.js"></script>
+    <script type="text/javascript" src="./js/productview.js"></script>
+    <script type="text/javascript" src="./js/wishlist.js"></script>
+    <script type="text/javascript" src="./js/my_productview.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+
+</body>
+
+</html>
