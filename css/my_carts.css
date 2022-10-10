@@ -1,0 +1,417 @@
+/* importing css file for the header and footer of web Page */
+@import url("./style.css");
+
+/* This is the  universal selector and its apply to all the elements */
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* This style sheet is used for breadcrumb navigation */
+.profile-breadcrumb {
+    background-color: #e9ecef;
+}
+
+.profile-breadcrumb ol {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+.profile-breadcrumb li:nth-child(2)::before {
+    padding: 5px;
+    content: "/";
+}
+
+.profile-breadcrumb ol li,
+.profile-breadcrumb ol li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.profile-breadcrumb ol li:nth-child(2) a {
+    font-weight: bold;
+}
+
+/* _______end of breadcrumb navigation________ */
+
+/* this style sheet is used for add to cart products */
+.mycart-top-div {
+    margin: 40px 0 10px;
+    font-weight: bold;
+}
+
+.mycart-top-heading {
+    column-gap: 20px;
+}
+
+.mycart-top-heading h4 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fd6e00;
+}
+
+.mycart-top-heading span,
+.mycart-top-total {
+    font-size: 16px;
+}
+
+.cart-box-mb {
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.cart-box {
+    border: 1px solid #d9d9d9;
+}
+
+.cart-img {
+    padding: 20px;
+}
+
+.cart-img img {
+    width: 150px;
+    height: 180px;
+    border: 1px solid #d9d9d9;
+    background-color: #f5f5f5;
+}
+
+.about-product {
+    padding: 20px 10px;
+    line-height: 30px;
+}
+
+.about-product h6,
+.about-product p,
+.product-remove-wishlist,
+.price-after-discount,
+.product-price span:nth-child(2) {
+    font-weight: bold;
+}
+
+.about-product h6 {
+    font-size: 16px;
+}
+
+.about-product p {
+    font-size: 14px;
+}
+
+.product-cost-delivery {
+    text-align: right;
+    padding: 20px;
+    line-height: 30px;
+}
+
+.product-price span:first-child {
+    text-decoration: line-through;
+}
+
+.product-price span:nth-child(2) {
+    color: #fd6e00;
+}
+
+.product-cost-delivery div:first-child,
+.product-cost-delivery div:nth-child(2) {
+    font-size: 16px;
+}
+
+.product-cost-delivery div:nth-child(3) {
+    font-size: 14px;
+}
+
+.product-remove-wishlist {
+    border: 1px solid #d9d9d9;
+    padding: 10px;
+}
+
+.product-remove-wishlist span {
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.product-remove-wishlist span:hover {
+    color: #fd6e00;
+}
+
+.product-remove-wishlist span:nth-child(2):hover {
+    color: #000000;
+}
+
+.product-remove-wishlist span:nth-child(2) {
+    cursor: default;
+}
+
+.select-size select {
+    width: 120px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #cccccc;
+    border: 0px;
+    font-size: 16px;
+}
+
+/* this style sheet is used for quantity button */
+.select-qty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-qty span {
+    width: 35px;
+    height: 35px;
+    font-weight: bold;
+    border: 2px solid #000000;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.select-qty span:first-child:hover,
+.select-qty span:nth-child(3):hover {
+    color: #fd6e00;
+    border-color: #fd6e00;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.select-size-qty {
+    column-gap: 50px;
+    margin-top: 20px;
+}
+
+/* this style sheet is used for price deatails container */
+.coupon-head {
+    border: 1px solid #d9d9d9;
+    padding: 20px;
+    line-height: 30px;
+}
+
+.coupon-head h5 {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.apply-coupon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.apply-coupon span i {
+    color: #fd6e00;
+}
+
+.apply-coupon span {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.apply-coupon button {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffff;
+    background-color: #fd6e00;
+    border: 2px solid #fd6e00;
+    border-radius: 5px;
+    padding: 2px 20px;
+}
+
+.apply-coupon button:hover {
+    background-color: #ffff;
+    color: #fd6e00;
+}
+
+.coupon-body {
+    border: 1px solid #d9d9d9;
+    padding: 20px;
+    line-height: 40px;
+}
+
+.coupon-footer {
+    line-height: 30px;
+}
+
+.price-total {
+    font-size: 16px;
+}
+
+.coupon-body .price-list,
+.coupon-footer .price-total {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.price-list .pricelist-heading-left {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.coupon-discount-right,
+.delivery-charges-right span:nth-child(2) {
+    color: #00cc00;
+}
+
+.delivery-charges-right span:first-child {
+    text-decoration: line-through;
+}
+
+.coupon-discount-right {
+    color: #fd6e00;
+}
+
+.price-list {
+    font-size: 14px;
+}
+
+.coupon-footer .placeorder-btn button {
+    width: 100%;
+    color: #ffff;
+    background-color: #fd6e00;
+    border: 2px solid #fd6e00;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.coupon-footer {
+    font-weight: bold;
+}
+
+.coupon-footer .placeorder-btn {
+    margin: 10px 0;
+}
+
+.coupon-footer .placeorder-btn button:hover {
+    color: #fd6e00;
+    background-color: #ffff;
+}
+
+/* this media query really means, is “If device minimum width is 200px to maximum width is 767px, then do {…}” */
+@media only screen and (min-width:200px) and (max-width:767px) {
+    .product-cost-delivery {
+        text-align: left;
+    }
+
+    .about-product {
+        padding: 20px 20px
+    }
+}
+
+/* this media query really means, is “If device minimum width is 200px to maximum width is 500px, then do {…}” */
+@media only screen and (min-width:200px) and (max-width:500px) {
+    .profile-breadcrumb ol {
+        font-size: 10px;
+        padding: 10px 0;
+    }
+
+    .mycart-top-div {
+        margin: 20px 0 10px;
+    }
+
+    .cart-padding {
+        padding: 0;
+    }
+
+    .mycart-top-heading h4 {
+        font-size: 18px;
+    }
+
+    /* same font size for different element */
+    .mycart-top-heading span,
+    .mycart-top-total,
+    .about-product h6,
+    .select-size select,
+    .select-qty span,
+    .product-cost-delivery div:first-child,
+    .product-cost-delivery div:nth-child(2),
+    .product-remove-wishlist span,
+    .apply-coupon span,
+    .price-list .pricelist-heading-left,
+    .price-total {
+        font-size: 12px;
+    }
+
+    .select-qty span {
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+    }
+
+    .select-qty span:first-child:hover,
+    .select-qty span:nth-child(3):hover {
+        font-size: 16px;
+    }
+
+    .select-size-qty {
+        column-gap: 35px;
+    }
+
+    .about-product p,
+    .product-cost-delivery div:nth-child(3),
+    .price-list {
+        font-size: 10px;
+    }
+
+    .mycart-top-heading {
+        column-gap: 5px;
+    }
+
+    .cart-img,
+    .about-product,
+    .product-cost-delivery,
+    .product-remove-wishlist span,
+    .coupon-head,
+    .coupon-body {
+        padding: 10px;
+    }
+
+    .cart-box-mb {
+        margin-bottom: 20px;
+    }
+
+    .about-product,
+    .product-cost-delivery,
+    .coupon-head {
+        line-height: 20px;
+    }
+
+    /* this style sheet is used for product coupon box and price details*/
+    .coupon-body {
+        line-height: 30px;
+    }
+
+    .coupon-head h5 {
+        font-size: 16px;
+    }
+
+    .apply-coupon button {
+        font-size: 12px;
+        padding: 2px 10px;
+    }
+
+    .select-size select {
+        width: 100px;
+    }
+
+    .placeorder-btn {
+        margin: 5px 0;
+    }
+
+    .coupon-footer button {
+        padding: 0;
+        font-size: 12px
+    }
+}

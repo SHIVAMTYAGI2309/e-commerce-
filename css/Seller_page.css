@@ -1,0 +1,466 @@
+/* importing css file for the header and footer of web Page */
+@import url("./style.css");
+
+/* This is the  universal selector and its apply to all the elements */
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+
+/* This style sheet is used for Seller page */
+
+/* this style sheet is used for upper section */
+.background-color-seller {
+    background-color: #fd6e00;
+}
+
+.background-color-seller .row {
+    margin: 0;
+}
+
+.padding-seller {
+    padding: 4rem 0;
+}
+
+.seller-top-left {
+    color: white;
+}
+
+.human-img-title img {
+    width: 12rem;
+}
+
+.human-img-title h1 {
+    font-size: 4rem;
+    text-shadow: 0px 5px 10px rgb(0 0 0 / 20%);
+    font-weight: bold;
+}
+
+.sellerpage-icons {
+    text-align: center;
+    column-gap: 2rem;
+}
+
+.sellerpage-icons img {
+    height: 5rem;
+    width: 5rem;
+}
+
+.sellerpage-icons p {
+    font-weight: bold;
+}
+
+.rounded-img {
+    padding: 2rem;
+    border-radius: 50%;
+    background-color: white;
+    margin: 1vw;
+    box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
+}
+
+.seller-register {
+    background-color: white;
+}
+
+.register-body .heading {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.register-body .heading h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.register-body form {
+    padding: 2rem;
+}
+
+.register-body {
+    box-shadow: 0px 10px 10px 5px rgb(0 0 0 / 20%);
+}
+
+.register-body .form-control {
+    border-radius: 0;
+    height: 30px;
+}
+
+.register-body label span {
+    color: #fd6e00;
+    font-weight: bold;
+}
+
+.reg-cat-products {
+    margin: 2rem 0 0.5rem;
+}
+
+.reg-cat-products select {
+    width: 60%;
+    padding: 0 1rem;
+}
+
+.register-body label,
+.register-body input,
+.register-body select,
+.reg-call-us .call-available {
+    font-size: 0.8rem;
+}
+
+.reg-submit {
+    margin-top: 2rem;
+}
+
+.reg-submit button {
+    font-weight: bold;
+    color: white;
+    background-color: #fd6e00;
+    border: 2px solid #fd6e00;
+    height: 40px;
+    width: 100%;
+}
+
+.reg-submit button:hover {
+    color: #fd6e00;
+    background-color: white;
+}
+
+.reg-OR {
+    color: white;
+    margin: 1rem;
+}
+
+.reg-call-us a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-color: black;
+    padding: 1rem;
+    width: 100%;
+    font-weight: bold;
+    box-shadow: 0px 5px 10px 5px rgb(0 0 0 / 20%)
+}
+
+.reg-email-us a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-color: black;
+    padding: 1rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0px 5px 10px 5px rgb(0 0 0 / 20%)
+}
+
+/*_____________ end of upper section ____________*/
+
+/* This style sheet is used for bottom section */
+.SWDT-body {
+    margin: 8rem 0;
+}
+
+.SWDT-heading {
+    margin: 4rem;
+}
+
+.SWDT-heading h1 {
+    font-weight: normal;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+}
+
+.SWDT-profile .row {
+    margin: 0;
+}
+
+.SWDT-profile img {
+    width: 7rem;
+    height: 7rem;
+    margin: 1rem;
+}
+
+.SWDT-profile p {
+    font-size: 0.8rem;
+}
+
+.SWDT-profile h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/*___________ end of bottom section__________ */
+
+/* The @media screen rule is used in media queries to apply different styles for different media types/devices. */
+/* this query really means, is “If device minimum width is 934px to maximum width is 1100px, then do {…}” */
+@media only screen and (min-width:934px)and (max-width:1100px) {
+
+    /* this style sheet is used for upper section */
+    .human-img-title img {
+        width: 10rem;
+    }
+
+    .human-img-title h1 {
+        font-size: 3.5rem;
+    }
+
+    .sellerpage-icons {
+        column-gap: 1rem;
+        justify-content: space-between;
+    }
+
+    .rounded-img {
+        padding: 1rem;
+        margin: 1.5rem;
+    }
+
+    .sellerpage-icons img {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .register-body form {
+        padding: 1rem;
+    }
+
+    .reg-cat-products select {
+        width: 50%;
+    }
+
+    /* ___________end of upper section____________ */
+}
+
+/* The @media screen rule is used in media queries to apply different styles for different media types/devices. */
+/* this query really means, is “If device minimum width is 768px to maximum width is 933px, then do {…}” */
+@media only screen and (min-width:768px) and (max-width:933px) {
+
+    /* this style sheet is used for upper section */
+    .human-img-title {
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    .human-img-title img {
+        width: 8rem;
+    }
+
+    .human-img-title h1 {
+        font-size: 3rem;
+    }
+
+    .rounded-img {
+        padding: 1rem;
+    }
+
+    .sellerpage-icons {
+        column-gap: 1rem;
+    }
+
+    .register-body form {
+        padding: 1rem;
+    }
+
+    .reg-cat-products {
+        flex-direction: column;
+    }
+
+    .reg-cat-products select {
+        width: 100%;
+    }
+
+    .reg-cat-products {
+        margin: 0.5rem 0 0.5rem;
+    }
+
+    /* ________end of upper section_________ */
+
+    /* this style sheet is used for bottom section */
+    .SWDT-body {
+        margin: 4rem 0;
+    }
+
+    .SWDT-heading {
+        margin: 1rem;
+    }
+
+    /* _______end of bottom section_______ */
+}
+
+/* The @media screen rule is used in media queries to apply different styles for different media types/devices. */
+/* this query really means, is “If device minimum width is 631px to maximum width is 767px, then do {…}” */
+@media only screen and (min-width:631px) and (max-width:767px) {
+
+    /* this style sheet is used for upper section */
+    .human-img-title {
+        justify-content: space-between;
+    }
+
+    .human-img-title img {
+        width: 10rem;
+    }
+
+    .human-img-title h1 {
+        font-size: 4rem;
+    }
+
+    .sellerpage-icons {
+        justify-content: space-between;
+    }
+
+    .register-body {
+        margin-top: 1rem;
+    }
+
+    /* ________end of upper section_________ */
+
+    /* this style sheet is used for bottom section */
+    .SWDT-body {
+        margin: 4rem 0;
+    }
+
+    .SWDT-heading {
+        margin: 1rem;
+    }
+
+    .SWDT-profile .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .SWDT-profile .row div {
+        width: 60%;
+        margin: 1rem;
+    }
+
+    .col-12 {
+        flex: none;
+        max-width: none;
+    }
+
+    /* _______end of bottom section_______ */
+}
+
+/* The @media screen rule is used in media queries to apply different styles for different media types/devices. */
+/* this query really means, is “If device minimum width is 200px to maximum width is 630px, then do {…}” */
+@media only screen and (min-width:200px) and (max-width:630px) {
+
+    /* this style sheet is used for upper section */
+    .human-img-title {
+        justify-content: space-between;
+    }
+
+    .human-img-title img {
+        width: 25vw;
+    }
+
+    .human-img-title h1 {
+        font-size: 8vw;
+    }
+
+    .sellerpage-icons {
+        justify-content: space-between;
+    }
+
+    .sellerpage-icons img {
+        height: 10vw;
+        width: 10vw;
+    }
+
+    .rounded-img {
+        padding: 4vw;
+        margin: 3vw;
+    }
+
+    .sellerpage-icons {
+        column-gap: 4vw;
+    }
+
+    .reg-cat-products {
+        flex-direction: column;
+    }
+
+    .reg-cat-products select {
+        width: 100%;
+    }
+
+    .reg-cat-products {
+        margin: 1rem 0 0.5rem;
+    }
+
+    .padding-seller {
+        padding: 8vw 0;
+    }
+
+    .register-body form {
+        padding: 4vw;
+    }
+
+    /* __________end of upper section_________ */
+
+    /* font size 2.5vw for some contnets including upper and bottom section*/
+    .sellerpage-icons p,
+    .register-body label,
+    .register-body input,
+    .register-body select,
+    .reg-call-us .call-available,
+    .SWDT-profile p,
+    .reg-OR {
+        font-size: 2.5vw;
+    }
+
+    /* font size for 3.5vw for some contents including upper and bottom section  */
+    .register-body .heading h2,
+    .reg-submit button,
+    .reg-call-us,
+    .reg-email-us a,
+    .SWDT-profile h4 {
+        font-size: 3.5vw;
+    }
+
+    /* _________bottom section__________- */
+    .SWDT-body {
+        margin: 8vw 0;
+    }
+
+    .SWDT-heading {
+        margin: 2vw;
+    }
+
+    .SWDT-heading h1 {
+        font-size: 5vw;
+    }
+
+    .SWDT-profile .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .SWDT-profile .row div {
+        width: 70%;
+        margin: 2vw;
+    }
+
+    .col-12 {
+        flex: none;
+        max-width: none;
+    }
+
+    .SWDT-profile img {
+        width: 22vw;
+        height: 22vw;
+        margin: 3vw;
+    }
+
+    /* __________end of bottom section____________ */
+}

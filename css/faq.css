@@ -1,0 +1,215 @@
+/* importing css file for the header and footer of web Page */
+@import url("./style.css");
+
+/* This is the  universal selector and its apply to all the elements */
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* This style sheet is used for breadcrumb navigation */
+.profile-breadcrumb {
+    background-color: #e9ecef;
+}
+
+.profile-breadcrumb ol {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+.profile-breadcrumb li:nth-child(2)::before {
+    padding: 5px;
+    content: "/";
+}
+
+.profile-breadcrumb ol li,
+.profile-breadcrumb ol li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.profile-breadcrumb ol li:nth-child(2) a {
+    font-weight: bold;
+}
+
+/* _______end of breadcrumb navigation________ */
+
+/* this style sheet is used for side navigation of return order page */
+.side-navigation ul {
+    list-style: none;
+    line-height: 35px;
+    padding-left: 0;
+}
+
+.side-navigation div>div>div {
+    margin: 20px 0 20px 20px;
+}
+
+.side-navigation ul li h5 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.side-navigation ul li {
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+.side-navigation ul li a:hover:not(.side-navigation ul li:first-child) {
+    color: #fd6e00;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.type-issue li:nth-child(3) {
+    background-color: #e9ecef;
+}
+
+.side-navigation ul li a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+}
+
+.type-issue li:nth-child(3) a {
+    color: #fd6e00;
+    font-weight: bold;
+}
+
+/* this style sheet is used for main content of return order page */
+.faq-top h2 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fd6e00;
+}
+
+.faq-top {
+    margin-top: 20px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.pad-0 {
+    padding: 0;
+}
+
+.card-box {
+    font-size: 14px;
+    border-bottom: 1px solid #e9ecef;
+    margin: 5px;
+}
+
+.card-Q {
+    font-weight: bold;
+}
+
+.card-Q p {
+    margin: 0;
+}
+
+.card-Q {
+    line-height: 50px;
+}
+
+.card-Q span {
+    font-size: 14px;
+    padding-right: 15px;
+}
+
+.card-A {
+    padding-right: 30px;
+}
+
+/* lideup and down icon for FAQ */
+.card-Q .minus-icon {
+    display: none;
+}
+
+.active .minus-icon {
+    display: block;
+}
+
+.active .plus-icon {
+    display: none;
+}
+
+/* this media query really means, is “If device minimum width is 200px to maximum width is 991px, then do {…}” */
+@media only screen and (max-width:991px) and (min-width:200px) {
+
+
+    .side-navigation div>div>div {
+        margin: 20px 0;
+    }
+
+
+    /* this media query really means, is “If device minimum width is 200px to maximum width is 500px, then do {…}” */
+    @media only screen and (max-width:500px) and (min-width:200px) {
+        .profile-breadcrumb ol {
+            padding: 10px 0;
+            font-size: 12px;
+        }
+
+        .side-navigation ul li h5 {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .side-navigation ul li {
+            font-size: 12px;
+            padding-left: 2px;
+        }
+
+        .side-navigation ul {
+            line-height: 25px;
+        }
+
+        .side-navigation div>div>div {
+            margin: 10px 0;
+        }
+
+        .faq-top {
+            margin-top: 10px;
+        }
+
+        .faq-top h2 {
+            font-size: 20px;
+        }
+
+        .space-between-sm-xsm {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .pad-sm-xsm-0 {
+            padding: 10px 0;
+        }
+
+        .sort-by {
+            font-size: 14px;
+        }
+
+        .card-box {
+            font-size: 12px;
+            border-bottom: 1px solid #e9ecef;
+            margin: 0;
+        }
+
+        .card-Q p {
+            line-height: 25px;
+        }
+
+        .card-Q span {
+            font-size: 10px;
+            padding: 0 5px;
+        }
+        .card-A {
+            padding-right: 5px;
+        }
+    }
+
+}

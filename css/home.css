@@ -1,0 +1,720 @@
+/* importing css file for the header and footer of web Page */
+@import url("./style.css");
+
+/* This is the  universal selector and its apply to all the elements */
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* this style sheet is used for main element */
+
+/* carousel area */
+.carousel-item img {
+    width: 25vw;
+    height: 100%;
+}
+
+.carousel-item {
+    height: 400px;
+}
+
+.carousel-holder {
+    width: 100%;
+}
+
+/* jumbotron area */
+.jumbotron-carousel {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background-color: rgb(110, 127, 126);
+    margin-bottom: 5vw;
+    border-radius: unset;
+}
+
+/* ________________________________________ */
+
+/* jumbotrson text area */
+.jumbotron-text {
+    position: absolute;
+    left: 50%;
+}
+
+.jumbotron-text p {
+    font-size: 2vw;
+    margin-bottom: unset;
+}
+
+.jumbotron-text p:first-child {
+    font-family: 'Great Vibes', cursive;
+    color: yellowgreen;
+    font-weight: bold;
+}
+
+.jumbotron-text h1 {
+    font-size: 5vw;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: white;
+}
+
+.jumbotron-text p:nth-child(3) {
+    padding-bottom: 1em;
+    color: yellowgreen;
+}
+
+.jumbotron-text button {
+    font-size: 1vw;
+    font-weight: 500;
+    background: #fd6e00;
+    width: 10em;
+    height: 3.2em;
+    border-radius: 1.5em;
+    color: white;
+    border: 0.2em solid #fd6e00;
+    padding: unset;
+}
+
+.jumbotron-text button:hover {
+    background-color: white;
+    color: #fd6e00;
+}
+
+/* ___________________________________________ */
+
+/* This style sheet used for categories area */
+.cat-title h1 {
+    margin: 2vw 0.5vw;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3vw;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories div {
+    width: 30%;
+}
+
+.cat1,
+.cat2,
+.cat3 {
+    padding-right: 0.5vw;
+    padding-left: 0.5vw;
+    display: inline-block;
+}
+
+.categories .cat {
+    position: absolute;
+    top: 6vw;
+    right: 0.5vw;
+    width: 65%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.categories .z-index {
+    z-index: 2;
+}
+
+.cat h3 {
+    font-size: 2vw;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 0.5vw;
+}
+
+.cat button {
+    font-size: 1vw;
+    font-weight: 500;
+    background: #fd6e00;
+    width: 8em;
+    height: 3em;
+    border-radius: 1.5em;
+    color: white;
+    border: 0.2em solid #fd6e00;
+    padding: unset;
+    z-index: 1;
+}
+
+.cat button:hover {
+    background-color: white;
+    color: #fd6e00;
+}
+
+.btn-left-right {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-left-right .btn-left:hover {
+    box-shadow: 8px 0px 14px 4px rgba(49, 48, 48, 0.295);
+    font-size: 50px;
+}
+
+.btn-left-right .btn-right:hover {
+    box-shadow: -8px 0px 14px 4px rgba(49, 48, 48, 0.295);
+    font-size: 50px;
+}
+
+.btn-left-right .btn-left {
+    background: none;
+    font-size: 35px;
+    height: 100px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    border: none;
+}
+
+.btn-left-right .btn-right {
+    background: none;
+    font-size: 35px;
+    height: 100px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    border: none;
+}
+
+
+/* _______________________________ */
+
+/* Latest products style sheet */
+.products {
+    margin: 5vw 0 0;
+}
+
+.prdct-title {
+    display: flex;
+    align-items: center;
+    padding: 0 1vw;
+}
+
+.prdct-title h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3vw;
+    margin-bottom: unset;
+}
+
+.prdct-list {
+    justify-content: flex-end;
+    font-size: 1.2vw;
+    padding: 0.5vw 1vw;
+}
+
+.prdctlist-menu .active {
+    color: black;
+    font-weight: bold;
+    border-bottom: 1px solid #fd6e00;
+}
+
+.prdctlist-menu a {
+    padding: 1vw;
+    margin: 0 0.5vw;
+    color: black;
+}
+
+.prdctlist-menu a:hover {
+    color: #fd6e00;
+}
+
+.card-box {
+    padding: 1vw;
+}
+
+/* this is active through javascript */
+.hide {
+    opacity: 0;
+}
+
+.blur {
+    opacity: 0.4;
+}
+
+/* __________________________ */
+
+.badge-new {
+    position: absolute;
+    left: 16em;
+    top: 1vw;
+    z-index: 1;
+}
+
+.badge-new span {
+    background-color: #ff003c;
+    width: 4vw;
+    height: 2vw;
+    line-height: unset;
+    border-radius: 1vw;
+    font-size: 1vw;
+    display: flex;
+    justify-content: center;
+}
+
+.card-details {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5vw;
+}
+
+.card-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-details h5 {
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
+    font-weight: bold;
+}
+
+.card-details p {
+    font-size: 1.3vw;
+    margin-bottom: 1vw;
+}
+
+.product-ratings {
+    display: flex;
+    column-gap: 5px;
+}
+
+.product-ratings i {
+    color: #ffcc33;
+    font-size: 20px;
+}
+
+.card-details span:first-child {
+    font-weight: bold;
+}
+
+.card-details span:nth-child(2) {
+    text-decoration: line-through;
+}
+
+.card-details span:nth-child(3) {
+    color: #fd6e00;
+    font-weight: bold;
+}
+
+.view-more {
+    display: flex;
+    align-items: center;
+}
+
+.view-more {
+    justify-items: center;
+    display: grid;
+    padding: 2vw;
+}
+
+/* styling for the buttons */
+.view-more button {
+    font-size: 1vw;
+    background: #fd6e00;
+    width: 10em;
+    height: 3.5em;
+    border-radius: 2em;
+    color: white;
+    border: 0.2em solid #fd6e00;
+    padding: unset;
+    font-weight: bold;
+}
+
+/* styling for the buttons when its hover */
+.view-more button:hover {
+    background-color: white;
+    color: #fd6e00;
+}
+
+/*_____________________End main element_______________________*/
+
+
+/* The @media screen rule is used in media queries to apply different styles for different media types/devices. */
+/* this query really means, is “If device minimum width is 990px to maximum width is 1100px, then do {…}” */
+@media only screen and (min-width:990px) and (max-width:1100px) {
+
+    .jumbotron-text button,
+    .cat button,
+    .view-more button {
+        font-size: 1.2vw;
+    }
+
+    .prdctlist-menu a {
+        margin: 0 1.2vw;
+    }
+
+    .badge-new {
+        top: 1vw;
+        left: 22vw;
+    }
+
+    .carousel-item img {
+        width: 30vw;
+    }
+
+    .carousel-item {
+        height: 350px;
+    }
+}
+
+/* The @media screen rule is used in media queries to apply different styles for different media types/devices. */
+/* this query really means, is “If device minimum width is 879px to maximum width is 989px, then do {…}” */
+@media only screen and (min-width:879px) and (max-width:989px) {
+
+    .jumbotron-text button,
+    .cat button,
+    .view-more button {
+        font-size: 1.3vw;
+    }
+
+    .prdct-list {
+        font-size: 1.5vw;
+    }
+
+    .cat h3 {
+        font-size: 2.3vw;
+    }
+
+    .btn-left-right .btn-left,
+    .btn-left-right .btn-right {
+        font-size: 30px;
+        height: 80px;
+        width: 60px;
+    }
+
+    .btn-left-right .btn-left:hover,
+    .btn-left-right .btn-right:hover {
+        font-size: 40px;
+    }
+
+    .prdctlist-menu a {
+        margin: 0 1.2vw;
+    }
+
+    .product-ratings {
+        column-gap: 4px;
+    }
+
+    .card-details h5 {
+        font-size: 1.6vw;
+    }
+
+    .card-details p {
+        font-size: 1.4vw;
+    }
+
+    .carousel-item img {
+        width: 30vw;
+    }
+
+    .carousel-item {
+        height: 350px;
+    }
+
+    .badge-new {
+        top: 1vw;
+        left: 22vw;
+    }
+
+    .payment div:nth-child(2) img {
+        width: 4vw;
+    }
+
+    .connect i {
+        width: 3.5vw;
+        font-size: 2.5vw;
+    }
+
+}
+
+
+/* The @media screen rule is used in media queries to apply different styles for different media types/devices. */
+/* this query really means, is “If device minimum width is 768px to maximum width is 878px, then do {…}” */
+@media only screen and (min-width:768px) and (max-width:878px) {
+
+    .jumbotron-text button,
+    .cat button,
+    .view-more button {
+        font-size: 1.4vw;
+    }
+
+    .prdct-list {
+        font-size: 1.6vw;
+    }
+
+    .carousel-item {
+        height: 320px;
+    }
+
+    .carousel-item img {
+        width: 30vw;
+    }
+
+    .cat h3 {
+        font-size: 2.5vw;
+    }
+
+    .btn-left-right .btn-left,
+    .btn-left-right .btn-right {
+        font-size: 30px;
+        height: 80px;
+        width: 60px;
+    }
+
+    .btn-left-right .btn-left:hover,
+    .btn-left-right .btn-right:hover {
+        font-size: 40px;
+    }
+
+    .prdctlist-menu a {
+        margin: 0 1vw;
+    }
+
+    .product-ratings {
+        column-gap: 3px;
+    }
+
+    .badge-new {
+        position: absolute;
+        left: 22vw;
+        top: 1vw;
+    }
+
+    .badge-new span {
+        background-color: rgb(255, 0, 60);
+        width: 4vw;
+        height: 2vw;
+        line-height: unset;
+        border-radius: 1vw;
+        font-size: 1.3vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-details h5 {
+        font-size: 1.8vw;
+    }
+
+    .card-details p {
+        font-size: 1.6vw;
+    }
+
+    .product-ratings i {
+        font-size: 1.8vw;
+    }
+
+}
+
+
+/* The @media screen rule is used in media queries to apply different styles for different media types/devices. */
+/* this query really means, is “If [device width] is less than or equal to 767px, then do {…}” */
+@media only screen and (max-width: 767px) {
+
+    .categories {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cat1,
+    .cat2,
+    .cat3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 2vw 8vw;
+    }
+
+    .categories .cat {
+        position: absolute;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        left: 30vw;
+        top: unset;
+        width: unset;
+
+    }
+
+    .btn-left-right {
+        display: none;
+    }
+
+    .cat h3 {
+        font-size: 4vw;
+    }
+
+    .jumbotron-text p {
+        font-size: 3vw;
+    }
+
+    .jumbotron-text h1 {
+        font-size: 8vw;
+    }
+
+}
+
+/* The @media screen rule is used in media queries to apply different styles for different media types/devices. */
+/* this query really means, is “If device minimum width is 631px to maximum width is 767px, then do {…}” */
+@media only screen and (min-width:631px)and (max-width:767px) {
+
+    .jumbotron-text button,
+    .cat button,
+    .view-more button {
+        font-size: 1.7vw;
+    }
+
+    .carousel-item {
+        height: 310px;
+    }
+
+    .carousel-item img {
+        width: 35vw;
+    }
+
+    .prdct-list {
+        font-size: 2vw;
+    }
+
+    .cat-title h1 {
+        margin: 5vw 0 0.5vw;
+        font-size: 4vw;
+    }
+
+    .prdct-title h1 {
+        font-size: 4vw;
+    }
+
+    .prdctlist-menu a {
+        padding: 0.8vw;
+        margin: 0 1.5vw;
+    }
+
+    .card-details h5 {
+        font-size: 2vw;
+        font-weight: bold;
+    }
+
+    .card-details p {
+        font-size: 1.8vw;
+    }
+
+    .product-ratings i {
+        font-size: 2vw;
+    }
+
+    .toggle-button {
+        font-size: 2.5vw;
+    }
+
+    .badge-new span {
+        font-size: 1.8vw;
+        height: 3vw;
+        width: 5vw;
+        align-items: center;
+    }
+
+    .badge-new {
+        left: 36vw;
+        top: 1vw;
+    }
+
+}
+
+
+/* The @media screen rule is used in media queries to apply different styles for different media types/devices. */
+/* this query really means, is “If device minimum width is 450px to maximum width is 630px, then do {…}” */
+@media only screen and (min-width:200px) and (max-width:630px) {
+
+    .jumbotron-text button,
+    .cat button,
+    .view-more button {
+        font-size: 2vw;
+    }
+
+    .carousel-item {
+        height: 50vw;
+    }
+
+    .carousel-item img {
+        width: 35vw;
+    }
+
+    .prdct-list {
+        font-size: 2.2vw;
+    }
+
+    .headernav,
+    .btn-signin {
+        margin-left: unset;
+    }
+
+    .cat-title h1 {
+        margin: 6vw 0 1vw;
+        font-size: 4vw;
+    }
+
+    .product-ratings {
+        column-gap: 2px;
+    }
+
+    .prdct-title h1 {
+        font-size: 4vw;
+    }
+
+    .prdctlist-menu a {
+        padding: 0.5vw;
+        margin: 0 1.5vw;
+    }
+
+    .card-details h5 {
+        font-size: 2.2vw;
+        font-weight: bold;
+    }
+
+    .card-details p {
+        font-size: 2vw;
+    }
+
+    .product-ratings i {
+        font-size: 2.3vw;
+    }
+
+    .toggle-button {
+        font-size: 3vw;
+    }
+
+    .badge-new span {
+        font-size: 2vw;
+        height: 3.5vw;
+        width: 5vw;
+        align-items: center;
+    }
+
+    .badge-new {
+        left: 35vw;
+        top: 1vw;
+    }
+
+}
