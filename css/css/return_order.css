@@ -1,0 +1,442 @@
+/* importing css file for the header and footer of web Page */
+@import url("./style.css");
+
+/* This is the  universal selector and its apply to all the elements */
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* This style sheet is used for breadcrumb navigation */
+.profile-breadcrumb {
+    background-color: #e9ecef;
+}
+
+.profile-breadcrumb ol {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+.profile-breadcrumb li:nth-child(2)::before {
+    padding: 5px;
+    content: "/";
+}
+
+.profile-breadcrumb ol li,
+.profile-breadcrumb ol li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.profile-breadcrumb ol li:nth-child(2) a {
+    font-weight: bold;
+}
+
+/* _______end of breadcrumb navigation________ */
+
+/* this style sheet is used for side navigation of return order page */
+.side-navigation ul {
+    list-style: none;
+    line-height: 35px;
+    padding-left: 0;
+}
+
+.side-navigation div>div>div {
+    margin: 20px 0 20px 20px;
+}
+
+.side-navigation ul li h5 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.side-navigation ul li {
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+.side-navigation ul li a:hover:not(.side-navigation ul li:first-child, .my-account ul li) {
+    color: #fd6e00;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.my-account img {
+    width: 80px;
+}
+
+.return-orders-img img {
+    border: 1px solid #d9d9d9;
+}
+
+.orders li:nth-child(4) {
+    background-color: #e9ecef;
+}
+
+.side-navigation ul li a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+}
+
+.orders li:nth-child(4) a {
+    color: #fd6e00;
+    font-weight: bold;
+}
+
+/* this style sheet is used for main content of return order page */
+.return-orders-top h2 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fd6e00;
+}
+
+.return-orders-top {
+    margin-top: 20px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.sort-by select {
+    border: 1px solid #000000;
+    font-weight: bold;
+}
+
+.sort-by {
+    font-size: 16px;
+}
+
+.order-no p {
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.return-orders-details div:first-child h5 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.return-orders-details .product-rating ul {
+    list-style: none;
+    display: flex;
+    column-gap: 5px;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    color: #ffcc33;
+}
+
+.return-orders-details .product-rating ul span {
+    color: black;
+    font-size: 14px;
+}
+
+.return-orders-details .product-color-seller span {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.return-orders-details .product-cost span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.return-orders-details .product-cost span:nth-child(2) {
+    font-weight: normal;
+    text-decoration: line-through;
+}
+
+.return-orders-details .product-cost span:nth-child(3) {
+    color: #fd6e00;
+}
+
+.return-orders-details {
+    line-height: 30px;
+}
+
+.delivery-expect {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    padding: 15px;
+}
+
+.pad-0 {
+    padding: 0;
+}
+
+.track-item-slider {
+    padding: 20px 20px;
+}
+
+.track-item-slider-top input {
+    width: 33%;
+}
+
+.track-item-slider-top input {
+    position: relative;
+    z-index: 1;
+}
+
+.track-item-slider-top input {
+    -webkit-appearance: none;
+    height: 10px;
+    background-color: #FD2300;
+    outline: none;
+    -webkit-transition: .2s;
+    width: 100%;
+}
+
+.track-item-slider-top input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FD2300;
+}
+
+.track-item-slider-top input::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #FD2300;
+}
+
+.track-item-slider-top input:first-child::before {
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+    font-size: 20px;
+    font-weight: bold;
+    color: #FD2300;
+    position: relative;
+    bottom: 9px;
+}
+
+.track-item-slider-bottom {
+    max-width: 100%;
+}
+
+.track-item-slider-bottom input {
+    width: 100%;
+    position: relative;
+    -webkit-appearance: none;
+    height: 1px;
+    background-color: #d9d9d9;
+    outline: none;
+    -webkit-transition: .2s;
+}
+
+.track-item-slider>div {
+    margin: 20px 0 30px;
+}
+
+.track-item-slider-bottom input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 15px;
+    background-image: url('../images/Polygon 5.png');
+    cursor: pointer;
+    position: relative;
+    bottom: 8px;
+}
+
+.track-item-slider-bottom input::-moz-range-thumb {
+    width: 30px;
+    height: 15px;
+    background-image: url('../images/Polygon 5.png');
+    cursor: pointer;
+    position: relative;
+    bottom: 8px;
+}
+
+.track-item-slider-heading {
+    position: relative;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FD2300;
+    margin: 20px 0 !important;
+}
+
+.delivery-date span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.replacement>span {
+    border: 1px solid #d9d9d9;
+    padding: 10px;
+}
+
+.replacement span:first-child {
+    font-size: 16px
+}
+
+.replacement span:nth-child(2) {
+    font-size: 14px
+}
+
+.replacement .replacement-status {
+    color: #33cc33;
+    font-weight: bold;
+}
+
+/* this media query really means, is “If device minimum width is 200px to maximum width is 991px, then do {…}” */
+@media only screen and (max-width:991px) and (min-width:200px) {
+
+
+    .side-navigation div>div>div {
+        margin: 20px 0;
+    }
+
+    .return-orders-img img {
+        width: 200px;
+    }
+
+/* this media query really means, is “If device minimum width is 200px to maximum width is 500px, then do {…}” */
+    @media only screen and (max-width:500px) and (min-width:200px) {
+        .profile-breadcrumb ol {
+            padding: 10px 0;
+            font-size: 12px;
+        }
+
+        .side-navigation ul li h5 {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .side-navigation ul li {
+            font-size: 12px;
+            padding-left: 2px;
+        }
+
+        .side-navigation ul {
+            line-height: 25px;
+        }
+
+        .side-navigation div>div>div {
+            margin: 10px 0;
+        }
+
+        .my-account img {
+            width: 50px;
+        }
+
+
+        .return-orders-img img {
+            width: 150px;
+        }
+
+        .return-orders-top {
+            margin-top: 10px;
+        }
+
+        .return-orders-top h2 {
+            font-size: 20px;
+        }
+
+        .space-between-sm-xsm {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .pad-sm-xsm-0 {
+            padding: 10px 0;
+        }
+
+        .sort-by {
+            font-size: 14px;
+        }
+
+        .order-no p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .return-orders-details div:first-child h5 {
+            font-size: 14px;
+        }
+
+        .return-orders-details {
+            line-height: 25px;
+        }
+
+        .return-orders-details .product-cost span {
+            font-size: 14px
+        }
+
+        .return-orders-details .product-rating ul {
+            column-gap: 2px;
+            font-size: 16px;
+        }
+
+        .delivery-expect {
+            font-size: 14px;
+            line-height: 25px;
+        }
+
+        .track-item-slider-top input {
+            height: 5px;
+        }
+
+        .track-item-slider-top input::-webkit-slider-thumb {
+            width: 15px;
+            height: 15px;
+        }
+
+        .track-item-slider-top input::-moz-range-thumb {
+            height: 15px;
+            width: 15px;
+        }
+
+        .track-item-slider-top input:first-child::before {
+            font-size: 15px;
+            bottom: 10px;
+        }
+
+        .track-item-slider-bottom input::-webkit-slider-thumb {
+            width: 25px;
+            height: 12px;
+            position: relative;
+            bottom: 6px;
+        }
+
+        .track-item-slider-bottom input::-moz-range-thumb {
+            width: 25px;
+            height: 12px;
+            position: relative;
+            bottom: 6px;
+        }
+
+        .track-item-slider-heading {
+            font-size: 14px;
+        }
+
+        .track-item-slider {
+            padding: 10px 5px;
+        }
+
+        .delivery-date span {
+            font-size: 14px;
+        }
+
+        .replacement>span {
+            padding: 5px;
+        }
+
+        .replacement span:first-child {
+            font-size: 14px
+        }
+
+        .replacement span:nth-child(2) {
+            font-size: 12px
+        }
+    }
+
+}

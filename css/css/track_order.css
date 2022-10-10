@@ -1,0 +1,224 @@
+/* importing css file for the header and footer of web Page */
+@import url("./style.css");
+
+/* This is the  universal selector and its apply to all the elements */
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* This style sheet is used for breadcrumb navigation */
+.profile-breadcrumb {
+    background-color: #e9ecef;
+}
+
+.profile-breadcrumb ol {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+.profile-breadcrumb li:nth-child(2)::before {
+    padding: 5px;
+    content: "/";
+}
+
+.profile-breadcrumb ol li,
+.profile-breadcrumb ol li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.profile-breadcrumb ol li:nth-child(2) a {
+    font-weight: bold;
+}
+
+/* _______end of breadcrumb navigation________ */
+
+/* this style sheet is used for side navigation of track order page */
+.side-navigation ul {
+    list-style: none;
+    line-height: 35px;
+    padding-left: 0;
+}
+
+.side-navigation div>div>div {
+    margin: 20px 0 20px 20px;
+}
+
+.side-navigation ul li h5,
+.track-order-detail h5,
+.track-order-delivery h5 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.track-order-delivery h5 i {
+    color: #33cc33;
+}
+
+.side-navigation ul li {
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+.side-navigation ul li a:hover:not(.side-navigation ul li:first-child, .my-account ul li) {
+    color: #fd6e00;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.my-account img {
+    width: 80px;
+}
+
+.track-order-img img {
+    border: 1px solid #d9d9d9;
+}
+
+.orders li:nth-child(3) {
+    background-color: #e9ecef;
+}
+
+.side-navigation ul li a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+}
+
+.orders li:nth-child(3) a {
+    color: #fd6e00;
+    font-weight: bold;
+}
+
+/* this style sheet is used for main content of track order page */
+.track-order-top h2 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fd6e00;
+}
+
+.track-order-top {
+    margin-top: 20px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.pad-top-bottom {
+    padding: 20px 0;
+}
+
+.borderline-top-bottom {
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.line-height {
+    line-height: 30px;
+}
+
+.track-order-detail,
+.track-order-delivery {
+    font-size: 14px;
+}
+
+.pad-0 {
+    padding: 0;
+}
+
+.line-height P {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+/* this media query really means, is “If device minimum width is 200px to maximum width is 991px, then do {…}” */
+@media only screen and (max-width:991px) and (min-width:200px) {
+    .pad-lg-sm-0 {
+        padding: 0;
+    }
+
+    .side-navigation div>div>div {
+        margin: 20px 0;
+    }
+
+    .track-order-img img {
+        width: 200px;
+    }
+
+    .float-right {
+        float: none !important;
+    }
+
+    .pad-bottom {
+        padding-bottom: 20px;
+    }
+
+    /* this query really means, is “If device minimum width is 200px to maximum width is 500px, then do {…}” */
+    @media only screen and (max-width:500px) and (min-width:200px) {
+        .profile-breadcrumb ol {
+            padding: 10px 0;
+            font-size: 12px;
+        }
+
+        .side-navigation ul li h5,
+        .track-order-detail h5,
+        .track-order-delivery h5 {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .side-navigation ul li {
+            font-size: 12px;
+            padding-left: 2px;
+        }
+
+        .side-navigation ul {
+            line-height: 25px;
+        }
+
+        .side-navigation div>div>div {
+            margin: 10px 0;
+        }
+
+        .my-account img {
+            width: 50px;
+        }
+
+        .space-between-sm-xsm {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .track-order-img img {
+            width: 150px;
+        }
+
+        .track-order-top {
+            margin-top: 10px;
+        }
+
+        .track-order-top h2 {
+            font-size: 20px;
+        }
+
+        .pad-top-bottom {
+            padding: 10px 0;
+        }
+
+        .pad-bottom {
+            padding: 10px 0;
+        }
+
+        .margin-bottom {
+            margin-bottom: 10px;
+        }
+    }
+
+}

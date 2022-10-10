@@ -1,0 +1,268 @@
+/* This is the  universal selector and its apply to all the elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* this style sheet is used for box shadow, paddings, displays, positions and trasnsform */
+.card-box {
+    box-shadow: 0px 0px 15px 5px rgb(185, 185, 185);
+    width: fit-content;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    padding: 2vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-box img {
+    width: 15vw;
+    margin: 0 2vw 2vw;
+}
+
+/* this style sheet is uesd for thank you area element */
+.thankyou-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.thankyou-area h1 {
+    font-size: 4vw;
+    font-weight: bold;
+    margin: unset;
+}
+
+.thankyou-area p {
+    font-size: 1.5vw;
+    background-color: rgb(253, 110, 0);
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: unset;
+}
+
+.discount-area {
+    border: 2px solid rgb(185, 185, 185);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 22vw;
+    line-height: 1vw;
+    margin: 4vw 0;
+}
+
+.legend-top {
+    transform: translate(0%, -60%);
+    background-color: white;
+    width: 5vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.discount-area h1 {
+    color: rgb(253, 110, 0);
+    font-size: 4vw;
+    font-weight: bold;
+    margin: unset;
+}
+
+.legend-bottom {
+    display: flex;
+    justify-content: center;
+    transform: translate(0%, 50%);
+    align-items: center;
+    background-color: white;
+    width: 14vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+
+/* this style sheets is used for coupon area */
+.coupon-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.coupon-area p:first-child {
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin-bottom: 0.5vw;
+}
+
+.coupon-area p:nth-child(2) {
+    margin: unset;
+    font-size: 1.2vw;
+}
+
+/* The @media screen rule is used in media queries to apply different styles for different media types/devices. */
+/* this query really means, is “If device minimum width is 750px to maximum width is 989px, then do {…}” */
+@media only screen and (min-width:750px) and (max-width:989px) {
+    .card-box {
+        padding: 3vw;
+    }
+
+    .card-box img {
+        width: 18vw;
+        margin: 0 3vw 3vw;
+    }
+
+    .thankyou-area h1 {
+        font-size: 5vw;
+    }
+
+    .thankyou-area p {
+        font-size: 2vw;
+    }
+
+    .discount-area {
+        border: 2px solid rgb(185, 185, 185);
+        width: 22vw;
+        line-height: 1vw;
+        margin: 4vw 0;
+    }
+
+    .legend-top {
+        width: 7vw;
+        font-size: 2vw;
+    }
+
+    .discount-area h1 {
+        font-size: 5vw;
+    }
+
+    .legend-bottom {
+        width: 18vw;
+        font-size: 1.5vw;
+    }
+
+    .coupon-area p:first-child {
+        font-size: 2vw;
+        margin-bottom: 0.8vw;
+    }
+
+    .coupon-area p:nth-child(2) {
+        font-size: 1.5vw;
+    }
+}
+
+/* The @media screen rule is used in media queries to apply different styles for different media types/devices. */
+/* this query really means, is “If device minimum width is 510px to maximum width is 749px, then do {…}” */
+@media only screen and (min-width:510px) and (max-width:749px) {
+    .card-box {
+        padding: 4vw;
+    }
+
+    .card-box img {
+        width: 20vw;
+        margin: 0 4vw 4vw;
+    }
+
+    .thankyou-area h1 {
+        font-size: 6vw;
+    }
+
+    .thankyou-area p {
+        font-size: 2.4vw;
+    }
+
+    .discount-area {
+        border: 1.5px solid rgb(185, 185, 185);
+        width: 28vw;
+        line-height: 1vw;
+        margin: 5vw 0;
+    }
+
+    .legend-top {
+        width: 9vw;
+        font-size: 2.4vw;
+    }
+
+    .discount-area h1 {
+        font-size: 6vw;
+    }
+
+    .legend-bottom {
+        width: 22vw;
+        font-size: 1.8vw;
+    }
+
+    .coupon-area p:first-child {
+        font-size: 2.4vw;
+        margin-bottom: 0.8vw;
+    }
+
+    .coupon-area p:nth-child(2) {
+        font-size: 2vw;
+    }
+}
+
+/* The @media screen rule is used in media queries to apply different styles for different media types/devices. */
+/* this query really means, is “If device minimum width is 200px to maximum width is 509px, then do {…}” */
+@media only screen and (min-width:200px) and (max-width:509px) {
+    .card-box {
+        padding: 10px;
+        box-shadow: 0px 0px 10px 2px rgb(185, 185, 185);
+    }
+    .card-box {
+        height: 350px;
+    }
+    .card-box img {
+        width: 100px;
+        margin: 0 20px 20px;
+    }
+
+    .thankyou-area h1 {
+        font-size: 36px;
+    }
+
+    .thankyou-area p {
+        font-size: 12px;
+    }
+
+    .discount-area {
+        border: 1.5px solid rgb(185, 185, 185);
+        width: 160px;
+        line-height: 10px;
+        margin: 20px 0;
+    }
+
+    .legend-top {
+        width: 40px;
+        font-size: 10px;
+    }
+
+    .discount-area h1 {
+        font-size: 34px;
+    }
+
+    .legend-bottom {
+        width: 120px;
+        font-size: 10px;
+    }
+
+    .coupon-area p:first-child {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+    .coupon-area p:nth-child(2) {
+        font-size: 10px;
+    }
+}
